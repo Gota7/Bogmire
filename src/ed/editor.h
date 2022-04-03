@@ -18,6 +18,18 @@ struct Editor
     imgui_addons::ImGuiFileBrowser fb; // File browser for selecting files.
     std::vector<DoorEditor> doorEditors; // Editors that edit doors.
 
+    // Map2 room pointer.
+    static const s64 MAP2_ROOM_ROOM_PTR = 0x300790;
+
+    // Map2 door pointer.
+    static const s64 MAP2_DOOR_TABLE_PTR = 0x300794;
+
+    // Old door table location.
+    static const s64 OLD_DOOR_TABLE = 0x2FFF80;
+
+    // New door table location.
+    static const s64 NEW_DOOR_TABLE = 0x336000;
+
     // Initialize the editor.
     void Init();
 
@@ -35,5 +47,11 @@ struct Editor
 
     // Update code.
     void Update();
+
+    // Convert a RAM address to a DOL address.
+    static s64 Ram2Dol(s64 ramAddr);
+
+    // Convert a DOL address to a RAM address.
+    static s64 Dol2Ram(s64 dolAddr);
 
 };

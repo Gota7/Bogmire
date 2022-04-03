@@ -1,6 +1,10 @@
 #include "editor.h"
 #include "../rlImGui/rlImGui.h"
 
+static s64 HeaderDolOffsets[] = { 256, 9408, 0, 0, 0, 0, 0, 2132000, 2132384, 2132672, 2133472, 2133504, 2183424, 3750112, 3783008, 3799584, 0, 0 };
+static s64 HeaderRAMOffsets[] = { 2147496192, 2147506016, 0, 0, 0, 0, 0, 2147505344, 2147505728, 2149628608, 2149629408, 2149629440, 2149679360, 2152529760, 2152568960, 2152585536, 0, 0 };
+static s64 HeaderSectionSizes[] = { 9152, 2122592, 0, 0, 0, 0, 0, 384, 288, 800, 32, 49920, 1566688, 32896, 16576, 16384, 0, 0 };
+
 void Editor::Init()
 {
 
@@ -140,4 +144,28 @@ void Editor::Update()
         if (!doorEditors[i].open) doorEditors.erase(doorEditors.begin() + i);
     }
 
+}
+
+s64 Editor::Ram2Dol(s64 ramAddr)
+{
+    for (int i = 0; i < IM_ARRAYSIZE(HeaderSectionSizes); i++)
+    {
+        if (ramAddr >= HeaderRAMOffsets[i] && ramAddr <= HeaderRAMOffsets[i] + HeaderSectionSizes[i])
+        {
+            return ramAddr - HeaderRAMOffsets[i] + HeaderDolOffsets[i];
+        }
+    }
+    return -1;
+}
+
+s64 Editor::Dol2Ram(s64 dolAddr)
+{
+    for (int i = 0; i < IM_ARRAYSIZE(HeaderSectionSizes); i++)
+    {
+        if (dolAddr >= HeaderDolOffsets[i] && dolAddr <= HeaderDolOffsets[i] + HeaderSectionSizes[i])
+        {
+            return dolAddr - HeaderDolOffsets[i] + HeaderRAMOffsets[i];
+        }
+    }
+    return -1;
 }

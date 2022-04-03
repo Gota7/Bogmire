@@ -1,0 +1,74 @@
+Butler's Room;The Butler's Room door.
+Hidden Room;No doors.
+Foyer 1F;The 1F Foyer <-> 2F Foyer viewport and the Foyer 1F double doors.
+Fortune-teller's Room;The Fortune-teller's Room door and the Mirror Room door.
+Mirror Room;The Mirror Room door.
+Laundry Room;The Laundry Room door and the Butler's Room door.
+1F Hallway A (Laundry Room, Basement);The 1F Hallway A <-> 1F Hallway B viewport, the 1F <-> B1 Stairwell upper door, the Laundry Room door, the Fortune-teller's Room door, and the Foyer 1F double doors.
+Kitchen;The Kitchen door and the Boneyard door.
+Dining Room;The Kitchen door and the Dining Room door.
+Ball Room;The Storage Room door and the Ball Room door.
+1F Hallway B (Dining Room, Ball Room);The 1F Hallway B <-> 1F Hallway C viewport, the 1F Hallway A <-> 1F Hallway B viewport, the Ball Room door, and the Dining Room door.
+Boneyard;The Boneyard door.
+Billiards Room;The Projection Room door and the Billiard's Room door.
+Projection Room;The Billiard's Room door.
+Storage Room;The Storage Room door.
+Graveyard;The Graveyard <-> Mansion walls bordering the Graveyard viewport.
+Washroom 1F;The Washroom 1F door.
+1F Hallway C (Conservatory, Billiards Room);The Conservatory door, the 1F Hallway C <-> 1F Hallway D viewport, the 1F <-> 2F Stairwell lower door, the Washroom 1F door, the 1F Hallway B <-> 1F Hallway C viewport, and the Billiard's Room door.
+1F <-> 2F Stairwell;The 1F <-> 2F Stairwell upper door, the Tea Room door, the 1F <-> 2F Stairwell lower door, and the Rec Room south door.
+The Mansion bordering the Graveyard;The Graveyard <-> Mansion walls bordering the Graveyard viewport.
+1F Hallway D (Courtyard, Bathroom 1F);The Bathroom 1F door, the Courtyard door, and the 1F Hallway C <-> 1F Hallway D viewport.
+Bathroom 1F;The Bathroom 1F door.
+Conservatory;The Conservatory door.
+Rec Room;The Rec Room north door and the Rec Room south door.
+Courtyard;The Bottom of the Well <-> Courtyard viewport, the Courtyard <-> Mansion walls bordering the Courtyard viewport, the Rec Room north door, and the Courtyard door.
+The Mansion bordering the Courtyard;The Courtyard <-> Mansion walls bordering the Courtyard viewport.
+Nursery;The Nursery door.
+The Twins' Room;The Twins' Room door.
+Sitting Room;The Guest Room door and the Sitting Room door.
+Guest Room;The Guest Room.
+2F Hallway A (Study, Master Bedroom);The Foyer 2F west door, the Study door, the Master Bedroom door, the Twins' Room door, and the Nursery door.
+Foyer 2F;The Parlor double doors, the Foyer 2F west door, and the 1F Foyer <-> 2F Foyer viewport.
+2F Hallway F (Sitting Room);The 2F Hallway F <-> 2F to Attic Stairwell viewport, the 2F Hallway E <-> 2F Hallway F viewport, and the Sitting Room door.
+2F <-> Attic Stairwell;The 2F to Attic Stairs <-> Attic Hallway A viewport and the 2F Hallway F <-> 2F to Attic Stairwell viewport.
+Master Bedroom;The Master Bedroom <-> 2F Balcony window and the Master Bedroom door.
+Study;The Study door.
+Parlor;The Anteroom door and the Parlor double doors.
+Sealed Room;No doors.
+2F Hallway E (Sealed Room);The 2F Hallway D <-> 2F Hallway E viewport and the 2F Hallway E <-> 2F Hallway F viewport.
+2F Hallway D (Astral Hall);The 2F Hallway B <-> 2F Hallway D viewport, the Astral Hall door, and the The 2F Hallway D <-> 2F Hallway E viewport.
+Balcony 2F;The Balcony 2F door and the Master Bedroom <-> 2F Balcony window.
+Wardrobe Room;The Wardrobe Room door and the Balcony 2F door.
+Anteroom;The Wardrobe Room door and the Anteroom door.
+Astral Hall;The Astral Hall door and the Observatory door.
+Observatory;The Observatory door.
+Washroom 2F;The Washroom 2F door.
+2F Hallway B (Area 3 entrance, 2F Washroom);The 2F Hallway B <-> 2F Hallway C viewport, the 1F <-> 2F Stairwell upper door, the Washroom 2F door, and the 2F Hallway B <-> 2F Hallway D viewport.
+2F Hallway C (Nana's Room, 2F Bathroom);The Nana's Room door, the Bathroom 2F door, and the 2F Hallway B <-> 2F Hallway C viewport,
+Bathroom 2F;The Bathroom 2F door.
+Nana's Room;The Nana's Room door.
+Tea Room;The Tea Room door.
+Armory;The Armory door and the Ceramics Studio door.
+Attic Hallway E (Armory, Telephone Room);The Attic Hallway D <-> Attic Hallway E viewport, the Telephone Room door, and the Armory door.
+Telephone Room;The Clockwork Room door and the Telephone Room door.
+Attic Hallway B (Safari Room west side);The Attic Hallway B <-> Attic Hallway C viewport and the Safari Room west door.
+Safari Room;The Safari Room north door and the Safari Room west door.
+Attic Hallway A (Safari Room north side);The 2F to Attic Stairs <-> Attic Hallway A viewport and the Safari Room north door.
+Attic Hallway D (Attic Balcony west side);The Balcony 3F west door and the Attic Hallway D <-> Attic Hallway E viewport.
+Ceramics Studio;The Ceramics Studio door.
+Clockwork Room;The Clockwork Room door.
+The Artist's Studio;The Artist's Studio door.
+Attic Hallway C (Artist's Studio);The Artist's Studio door, the Balcony 3F east door, and the Attic Hallway B <-> Attic Hallway C viewport.
+Balcony 3F;The Balcony 3F east door and the Balcony 3F west door.
+Roof;No doors.
+Cold Storage;The Cold Storage door.
+Basement Hallway A (Cold Storage, Cellar);The Basement Hallway A <-> Basement Hallway B viewport, the Cellar west door, and the Cold Storage door.
+Cellar;The Cellar north door and the Cellar west door.
+1F <-> B1 Stairwell;The Breaker room door, the Cellar north door, and the 1F <-> B1 Stairwell - upper door.
+Pipe Room;The Pipe Room door.
+Breaker Room;The Breaker Room door.
+Basement Hallway B (Pipe Room);The Pipe Room door, the Basement Hallway C door, and the Basement Hallway A <-> Basement Hallway B viewport.
+Basement Hallway C (Secret Altar);The Secret Altar door and the Basement Hallway C door.
+Bottom of the Well;The Bottom of the Well <-> Secret Altar viewport and the Bottom of the Well <-> Courtyard viewport.
+Secret Altar;The Bottom of the Well <-> Secret Altar viewport and the Secret Altar door.
