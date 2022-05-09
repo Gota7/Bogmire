@@ -14,7 +14,6 @@ struct DoorEditor
     bool open; // If the editor is open.
     bool newTableLoc = false; // If the new table location is used.
     std::vector<Door> doors; // Doors to store.
-    static std::vector<std::pair<std::string, std::string>> rooms; // Rooms listing.
 
     // Create a new door editor.
     DoorEditor(std::string dolLocation, std::string dolName);

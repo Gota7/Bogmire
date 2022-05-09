@@ -5,7 +5,9 @@
 #include <fstream>
 
 // Static vars.
-std::vector<std::pair<std::string, std::string>> DoorEditor::rooms;
+char** RoomNames = nullptr;
+char** RoomDescriptions = nullptr;
+int NumRooms;
 
 // Models for each of the door.
 static const char* DoorModels [] =
@@ -28,6 +30,23 @@ static const char* DoorModels [] =
     "Door Spikes"
 };
 
+// for string delimiter
+std::vector<std::string> Split(std::string s, std::string delimiter) {
+    size_t pos_start = 0, pos_end, delim_len = delimiter.length();
+    std::string token;
+    std::vector<std::string> res;
+
+    while ((pos_end = s.find (delimiter, pos_start)) != std::string::npos)
+    {
+        token = s.substr (pos_start, pos_end - pos_start);
+        pos_start = pos_end + delim_len;
+        res.push_back (token);
+    }
+
+    res.push_back (s.substr (pos_start));
+    return res;
+}
+
 DoorEditor::DoorEditor(std::string dolLocation, std::string dolName)
 {
     this->dolLocation = dolLocation;
@@ -36,14 +55,20 @@ DoorEditor::DoorEditor(std::string dolLocation, std::string dolName)
     gFile.SetEndian(true);
     ReadDoors();
     open = true;
-    if (rooms.empty())
+    if (RoomNames == nullptr)
     {
-        std::ifstream file("Read.txt");
+        std::ifstream file("object_data/rooms.txt");
         std::string str;
+        std::vector<std::string> roomNames;
+        std::vector<std::string> roomDescriptions;
         while (std::getline(file, str))
         {
-            // TODO: READ THE ROOMS LIST!!!
+            auto split = Split(str, ";");
+            roomNames.push_back(split[0]);
+            roomDescriptions.push_back(split[1]);
         }
+        RoomDescriptions = GenImGuiStringList(roomDescriptions, &NumRooms);
+        RoomNames = GenImGuiStringList(roomNames, &NumRooms);
     }
 }
 
@@ -89,7 +114,6 @@ void DoorEditor::DrawUI()
 
     // Draw data.
     ImGui::Begin(("Door Editor - " + dolName).c_str(), &open, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoResize);
-    //ImGui::Text("Hello World!");
     EditDoorUI(&doors[0]);
     ImGui::End();
 
@@ -151,7 +175,19 @@ void DoorEditor::EditDoorUI(Door* d)
     }
     ImGui::PopItemWidth();
 
-    // TODO: ROOM INDICES!!!
+    // Room indices.
+    int nextRoomIndex = d->nextRoomIndex;
+    int currRoomIndex = d->currRoomIndex;
+    if (ImGui::Combo("Next Room", &nextRoomIndex, RoomNames, NumRooms))
+    {
+        d->nextRoomIndex = (u8)nextRoomIndex;
+    }
+    ImGuiTooltip("For forward facing doors, next room refers to the room to the south of the door.\nFor sideways facing doors, next room refers to the room to the west of the door.");
+    if (ImGui::Combo("Current Room", &currRoomIndex, RoomNames, NumRooms))
+    {
+        d->currRoomIndex = (u8)currRoomIndex;
+    }
+    ImGuiTooltip("For forward facing doors, current room refers to the room to the north of the door.\nFor sideways facing doors, current room refers to the room to the east of the door.");
 
     // Style.
     ImGui::PopItemWidth();

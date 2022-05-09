@@ -14,3 +14,7 @@ bin
 *.dol
 settings.ini
 imgui.ini
+
+.vscode/
+
+*.exe
